@@ -1,0 +1,68 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+main
+{
+    width: 100vw;
+    height: 200vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(160,0,255);
+    background: linear-gradient(51deg, rgba(160,0,255,1) 0%, rgba(37,198,130,0.9990371148459384) 100%);
+}
+header
+{
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+header::before
+{
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-position: center;
+    background-size: cover;
+    background-image: url('https://exumag.com/wp-content/uploads/2018/02/Grumpy-Cat-t%C5%82o-1170x659.jpg');
+}
+.child
+{
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px black;
+    border-radius: 20px;
+    width: 200px;
+    height: 200px;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    background-color: #8bc5ec4f;
+    background-image: linear-gradient(135deg, #8bc5ec71 0%, #ff000041 100%);
+}
+.child-5
+{
+    background: rgba(160, 81, 45, 0.144);
+    grid-column: span 2;
+    border-radius: 20px;
+    width: 420px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #8bc5ec4f;
+    background-image: linear-gradient(135deg, #8bc5ec71 0%, #ff000041 100%);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px black;
+    transition: all 0.2s;
+}
+.child:hover , .child-5:hover
+{
+    transform: scale(1.06);
+}
